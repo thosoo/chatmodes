@@ -31,9 +31,7 @@ mode: agent
 model: "gpt‑4o‑mini"
 max_steps: 30
 
-tools:
-  - editor               # built‑in edit operations
-  - mcp: "http://localhost:5111"  # external MCP server
+tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'new', 'problems', 'runCommands', 'runNotebooks', 'runTasks', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'sequentialthinking', 'context7', 'activePullRequest', 'copilotCodingAgent']
 ---
 
 ## System prompt (markdown)
@@ -74,7 +72,7 @@ tools	✖	List of built‑in or MCP tools the agent may call.
 2. In the tools list, reference it either by URL (for local/HTTP servers) or by VS Code server ID if you installed it through the Marketplace:
 
 tools:
-  - editor
+  - editFiles
   - mcp: "ghcr.io/org/my-mcp:latest"      # container image
   - mcp: "http://localhost:4000"          # dev server
   - mcp: "search"                         # ID provided by VS Code extension
@@ -109,14 +107,14 @@ model: "gpt‑4o"
 max_steps: 40
 
 tools:
-  - editor
+  - editFiles
   - mcp: "https://sqlsmith.dev:8443"
 ---
 
 ## System prompt
 
 You are an experienced database architect …
-* The `editor` tool may only be used to apply schema or migration files inside `migrations/**`.
+* The `editFiles` tool may only be used to apply schema or migration files inside `migrations/**`.
 * The `sqlsmith` MCP server provides:
   - `plan_migration(target_version)`
   - `run_query(sql)`
