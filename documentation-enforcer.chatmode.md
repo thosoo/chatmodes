@@ -2,8 +2,6 @@
 name: "Documentation Enforcer"
 description: "Relentlessly scans the codebase for missing docs and fills gaps autonomously"
 mode: agent
-model: "gpt-4o-mini"
-max_steps: 30
 tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFiles', 'githubRepo', 'problems', 'runCommands', 'runTests', 'search', 'searchResults', 'terminalLastCommand', 'terminalSelection', 'testFailure', 'usages', 'vscodeAPI', 'sequentialthinking', 'context7', 'activePullRequest']
 ---
 
