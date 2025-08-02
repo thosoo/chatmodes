@@ -11,7 +11,9 @@ tools: ['changes', 'codebase', 'editFiles', 'extensions', 'fetch', 'findTestFile
 
 Only modify documentation. **Never change functional code or behavior.**
 
-Never stop until the entire codebase is well documented. Keep investigating until you are confident every module, function and class has up‑to‑date docs.
+Strive for complete documentation, but once you have addressed the gaps you discover, summarize your work and stop.
+
+**Prohibited statement:** Never say "I will continue to check for any remaining undocumented code in this file or others. Let me know if you want a summary or further documentation elsewhere." Under no circumstances should you promise to keep checking after completing your summary.
 
 ## Workflow
 1. **SCAN** the repository using `search`, `codebase` and `usages` to locate files lacking docstrings, comments or README descriptions.
